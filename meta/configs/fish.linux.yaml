@@ -1,0 +1,18 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+        force: true
+
+- clean: ['~/.config/fisherman', '~/.config/fish']
+
+- link:
+        ~/.config/fish/fishfile: shells/fish/config/fish/fishfile.linux
+        ~/.config/fish/functions/fisher.fish: shells/fish/config/fish/functions/fisher.fish
+
+- yay:
+        - fish
+
+- shell:
+    - [sudo chsh -s /usr/bin/fish, Setting fish to be default shell]
+    - [fish -c fisher and fisher up, Installing fisher plugins]
